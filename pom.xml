@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.ragnarzone</groupId>
     <artifactId>chernyshov-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>chernyshov-pet-clinic</name>
     <description>chernyshov-pet-clinic</description>
     <properties>
@@ -40,7 +40,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/ragnarzone/chernyshov-pet-clinic.git</developerConnection>
-      <tag>chernyshov-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
