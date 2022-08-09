@@ -1,11 +1,11 @@
 package com.ragnarzone.chernyshovpetclinic.services.map;
 
 import com.ragnarzone.chernyshovpetclinic.model.Pet;
-import com.ragnarzone.chernyshovpetclinic.services.CrudService;
+import com.ragnarzone.chernyshovpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
