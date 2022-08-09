@@ -2,9 +2,11 @@ package com.ragnarzone.chernyshovpetclinic.services.map;
 
 import com.ragnarzone.chernyshovpetclinic.model.Owner;
 import com.ragnarzone.chernyshovpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

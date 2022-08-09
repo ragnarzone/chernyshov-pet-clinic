@@ -2,9 +2,11 @@ package com.ragnarzone.chernyshovpetclinic.services.map;
 
 import com.ragnarzone.chernyshovpetclinic.model.Vet;
 import com.ragnarzone.chernyshovpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
 
     @Override
