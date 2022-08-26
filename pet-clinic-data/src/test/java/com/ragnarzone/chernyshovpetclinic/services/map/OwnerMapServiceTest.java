@@ -12,10 +12,12 @@ class OwnerMapServiceTest {
 
     OwnerMapService ownerMapService;
 
+    final Long ownerId = 1L;
+
     @BeforeEach
     void setUp() {
         ownerMapService = new OwnerMapService(new PetTypeMapService(), new PetMapService());
-        ownerMapService.save(Owner.builder().id(1L).build());
+        ownerMapService.save(Owner.builder().id(ownerId).build());
     }
 
     @Test
@@ -26,6 +28,8 @@ class OwnerMapServiceTest {
 
     @Test
     void findById() {
+        Owner owner = ownerMapService.findById(ownerId);
+        assertEquals(ownerId, owner.getId());
     }
 
     @Test
