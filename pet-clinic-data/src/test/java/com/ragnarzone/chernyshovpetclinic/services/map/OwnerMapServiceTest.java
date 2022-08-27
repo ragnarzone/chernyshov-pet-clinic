@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class OwnerMapServiceTest {
 
@@ -38,6 +39,13 @@ class OwnerMapServiceTest {
         Owner owner2 = Owner.builder().id(id).build();
         Owner savedOwner = ownerMapService.save(owner2);
         assertEquals(id, savedOwner.getId());
+    }
+
+    @Test
+    void saveNoId() {
+        Owner savedOwner = ownerMapService.save(Owner.builder().build());
+        assertNotNull(savedOwner);
+        assertNotNull(savedOwner.getId());
     }
 
     @Test
