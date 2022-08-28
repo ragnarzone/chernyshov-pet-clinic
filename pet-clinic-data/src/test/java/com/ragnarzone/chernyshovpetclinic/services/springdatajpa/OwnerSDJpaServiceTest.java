@@ -11,7 +11,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -41,7 +45,16 @@ class OwnerSDJpaServiceTest {
 
     @Test
     void findAll() {
+        Set<Owner> returnOwnerSet = new HashSet<>();
+        returnOwnerSet.add(Owner.builder().id(1l).build());
+        returnOwnerSet.add(Owner.builder().id(2l).build());
 
+        when(ownerRepository.findAll()).thenReturn(returnOwnerSet);
+
+        Set<Owner> owners = service.findAll();
+
+        assertNotNull(owners);
+        assertEquals(2, owners.size());
     }
 
     @Test
