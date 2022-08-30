@@ -18,7 +18,7 @@
     <name>chernyshov-pet-clinic</name>
     <description>chernyshov-pet-clinic</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <build>
